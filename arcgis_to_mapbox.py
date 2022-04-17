@@ -399,9 +399,22 @@ def create_tileset() -> MapboxTileset:
     return MapboxTileset(name=Config.MAPBOX_TILESET_NAME, access_token=Config.MAPBOX_ACCESS_TOKEN)
 
 
+# TODO apply to all functions that are using echo
+def echo_json(data: t.Mapping):
+    """utility for displaying data"""
+    click.echo(json.dumps(data, indent=2))
+
+
 @click.group
 def cli():
     """click group"""
+
+
+@cli.command
+def info():
+    """displays information about the data layer"""
+    service = ArcGISService(Config.SERVICE_URL)
+    echo_json(service.info)
 
 
 @cli.command

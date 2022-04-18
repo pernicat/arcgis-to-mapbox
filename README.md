@@ -1,5 +1,7 @@
 # arcgis_to_mapbox
 
+Tools for exporting data out of an ArcGIS Feature server and into a Mapbox data source
+
 ## API Documentation
 
 - [ArcGIS REST APIs Feature Service](https://developers.arcgis.com/rest/services-reference/enterprise/feature-service.htm)
@@ -9,8 +11,8 @@
 
 https://services3.arcgis.com/Jdnp1TjADvSDxMAX/ArcGIS/rest/services/DNR_ROADS/FeatureServer
 
+### Field Specifications
 
-Fields
 ```yaml
 OBJECTID:
     type: int
@@ -117,33 +119,3 @@ Shape__Length:
     type: float
 
 ```
-
-
-## MI_DNR_ROADS_ORV_2022
-
-## MI_DNR_ROADS_CLASS_2022
-
-### Federal, State, Local Govt, Private, Other Road
-
-Non-DNR Roads
-
-### Secondary Forest Road
-
-State Park campsite roads
-State Park day-use roads
-State Park service roads
-2-track roads on state land
-
-### Forest Access Route
-
-2-track roads on state land
-
-### Primary Forest Road 
-
-State Park Main Roads
-
-### Administration Access Only
-
-None
-
-## MI_DNR_ROADS_

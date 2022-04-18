@@ -3,6 +3,14 @@
     "case",
     [
       "match",
+      ["get", "OWNER"],
+      [4],
+      true,
+      false
+    ],
+    "hsl(60, 100%, 50%)",
+    [
+      "match",
       ["get", "RoadORVUse"],
       ["Non-DNR Roads"],
       true,
@@ -86,7 +94,7 @@
       false
     ],
     "hsl(29, 100%, 30%)",
-    "#000000"
+    "hsl(180, 100%, 50%)"
   ],
   "line-pattern": "",
   "line-opacity": 1,

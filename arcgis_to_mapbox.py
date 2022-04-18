@@ -375,6 +375,7 @@ class MapboxTileset:
         return check_response(response)
 
 
+
 @functools.cache
 def create_query(where: str = None) -> ArcGISQuery:
     """creates a query class"""

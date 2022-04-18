@@ -20,6 +20,14 @@ class Config:
     SERVICE_URL = f"https://{HOST}/{CONTEXT}/rest/services/{SERVICE_NAME}/{SERVICE_TYPE}"
     QUERY_URL = f"{SERVICE_URL}/{SERVICE_LAYER}/{OPERATION}"
 
+    MI_DNR_ROADS = "https://services3.arcgis.com/Jdnp1TjADvSDxMAX/ArcGIS/rest/services/DNR_ROADS/FeatureServer"
+    MI_DNR_OPEN_TRAILS_URL = "https://services3.arcgis.com/Jdnp1TjADvSDxMAX/ArcGIS/rest/services/open_Trails/FeatureServer"
+
+    ARCGIS_SERVICE_URLS ={
+        "MI_DNR_ROADS": MI_DNR_ROADS,
+        "MI_DNR_OPEN_TRAILS": MI_DNR_OPEN_TRAILS_URL
+    }
+
     MAPBOX_USER = "pernicat"
     MAPBOX_ID = "MI_DNR_ROADS_2022"
     # https://account.mapbox.com/access-tokens

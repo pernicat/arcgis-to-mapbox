@@ -119,3 +119,387 @@ Shape__Length:
     type: float
 
 ```
+
+## ArcGIS open_trails FeatureServer - ORV Routes
+
+
+
+### Raw Field Specification
+```yaml
+[
+    {
+        "name" : "OBJECTID", 
+        "type" : "esriFieldTypeOID", 
+        "alias" : "OBJECTID", 
+        "sqlType" : "sqlTypeOther", 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "Unique_ID", 
+        "type" : "esriFieldTypeString", 
+        "alias" : "Unique_ID", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 20, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "Link_ID", 
+        "type" : "esriFieldTypeString", 
+        "alias" : "Link_ID", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 20, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "PRD_DB", 
+        "type" : "esriFieldTypeString", 
+        "alias" : "PRD_DB", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 50, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "PRD_Join", 
+        "type" : "esriFieldTypeInteger", 
+        "alias" : "PRD_Join", 
+        "sqlType" : "sqlTypeOther", 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "State_Designated_Trail", 
+        "type" : "esriFieldTypeString", 
+        "alias" : "State_Designated_Trail", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 11, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "Approval_Status", 
+        "type" : "esriFieldTypeString", 
+        "alias" : "Approval_Status", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 20, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "Use_Category", 
+        "type" : "esriFieldTypeString", 
+        "alias" : "Use_Category", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 13, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "Status", 
+        "type" : "esriFieldTypeString", 
+        "alias" : "Status", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 11, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "Edit_Type", 
+        "type" : "esriFieldTypeString", 
+        "alias" : "Edit_Type", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 16, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "Collection_Type", 
+        "type" : "esriFieldTypeString", 
+        "alias" : "Collection_Type", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 18, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "Collection_Source", 
+        "type" : "esriFieldTypeString", 
+        "alias" : "Collection_Source", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 400, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "Collection_Date", 
+        "type" : "esriFieldTypeDate", 
+        "alias" : "Collection_Date", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 8, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "QAQC_Status", 
+        "type" : "esriFieldTypeString", 
+        "alias" : "QAQC_Status", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 32, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "QAQC_Approved_By", 
+        "type" : "esriFieldTypeString", 
+        "alias" : "QAQC_Approved_By", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 100, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "QAQC_Date", 
+        "type" : "esriFieldTypeDate", 
+        "alias" : "QAQC_Date", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 8, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "Edit_Date", 
+        "type" : "esriFieldTypeDate", 
+        "alias" : "Edit_Date", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 8, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "Edit_Name", 
+        "type" : "esriFieldTypeString", 
+        "alias" : "Edit_Name", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 50, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "Comments", 
+        "type" : "esriFieldTypeString", 
+        "alias" : "Comments", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 400, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "ORV_Route", 
+        "type" : "esriFieldTypeString", 
+        "alias" : "ORV_Route", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 20, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "ORV_Route_Name", 
+        "type" : "esriFieldTypeString", 
+        "alias" : "ORV_Route_Name", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 255, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "ORV_Restricted_Route", 
+        "type" : "esriFieldTypeString", 
+        "alias" : "ORV_Restricted_Route", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 11, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "License_Type", 
+        "type" : "esriFieldTypeString", 
+        "alias" : "License_Type", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 26, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "Trail_Network", 
+        "type" : "esriFieldTypeString", 
+        "alias" : "Trail_Network", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 400, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "Owner", 
+        "type" : "esriFieldTypeString", 
+        "alias" : "Owner", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 125, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "Administrator", 
+        "type" : "esriFieldTypeString", 
+        "alias" : "Administrator", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 50, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "Width", 
+        "type" : "esriFieldTypeString", 
+        "alias" : "Width", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 11, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "Surface", 
+        "type" : "esriFieldTypeString", 
+        "alias" : "Surface", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 51, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "Seasonal_Restriction", 
+        "type" : "esriFieldTypeString", 
+        "alias" : "Seasonal_Restriction", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 11, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "Seasonal_Restriction_Comment", 
+        "type" : "esriFieldTypeString", 
+        "alias" : "Seasonal_Restriction_Comment", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 400, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "Special_Designation", 
+        "type" : "esriFieldTypeString", 
+        "alias" : "Special_Designation", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 11, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "Special_Designation_Comment", 
+        "type" : "esriFieldTypeString", 
+        "alias" : "Special_Designation_Comment", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 400, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "On_Road", 
+        "type" : "esriFieldTypeString", 
+        "alias" : "On_Road", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 11, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "ROW", 
+        "type" : "esriFieldTypeString", 
+        "alias" : "ROW", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 18, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "ROW_Comments", 
+        "type" : "esriFieldTypeString", 
+        "alias" : "ROW_Comments", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 400, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "Miles", 
+        "type" : "esriFieldTypeDouble", 
+        "alias" : "Miles", 
+        "sqlType" : "sqlTypeOther", 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "Groom_Sponsor", 
+        "type" : "esriFieldTypeString", 
+        "alias" : "Groom_Sponsor", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 100, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "CreationDate", 
+        "type" : "esriFieldTypeDate", 
+        "alias" : "CreationDate", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 8, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "Creator", 
+        "type" : "esriFieldTypeString", 
+        "alias" : "Creator", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 128, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "EditDate", 
+        "type" : "esriFieldTypeDate", 
+        "alias" : "EditDate", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 8, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "Editor", 
+        "type" : "esriFieldTypeString", 
+        "alias" : "Editor", 
+        "sqlType" : "sqlTypeOther", 
+        "length" : 128, 
+        "domain" : null, 
+        "defaultValue" : null
+    }, 
+    {
+        "name" : "Shape__Length", 
+        "type" : "esriFieldTypeDouble", 
+        "alias" : "Shape__Length", 
+        "sqlType" : "sqlTypeDouble", 
+        "domain" : null, 
+        "defaultValue" : null
+    }
+]
+```

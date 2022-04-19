@@ -7,9 +7,6 @@ import dotenv
 dotenv.load_dotenv()
 
 
-
-
-
 class Config:  # pylint: disable=too-few-public-methods
     """configuration"""
     ROOT_DIR = Path(__file__).parent

@@ -9,13 +9,18 @@ from config import Config
 from .arcgis import ArcGISService, ArcGISQuery
 from .mapbox import MapboxTileset, MapboxTilesetSource
 
+SERVICES = {
+    "MI_DNR_ROADS": Config.MI_DNR_ROADS_URL,
+    "MI_DNR_OPEN_TRAILS": Config.MI_DNR_OPEN_TRAILS_URL,
+}
 
 @functools.cache
-def create_query(where: str = None) -> ArcGISQuery:
+def create_query(service_name: str, layer=0, where: str = None) -> ArcGISQuery:
     """creates a query class"""
+
     where = where or "1=1"
 
-    service = ArcGISService(Config.SERVICE_URL)
+    service = ArcGISService(SERVICES[service_name.upper()], layer)
 
     query = ArcGISQuery(service, where)
 
@@ -51,18 +56,31 @@ def info():
     echo_json(service.info)
 
 
-@cli.command
-@click.argument('where', nargs=-1)
-def count(where: str = None):
+def query_command(func: t.Callable[[ArcGISQuery, ...], t.Any]) -> callable:
+    """decorator for wrapping a cli command with query options"""
+    @cli.command(func.__name__)
+    @click.option(
+        "--service",
+        default="MI_DNR_ROADS",
+        type=click.Choice(SERVICES.keys(), case_sensitive=False)
+    )
+    @click.option("--layer", default=0, type=int)
+    @click.option("--where", default=None)
+    def wrapper(service: str, layer: int, where: str = None, **kwargs):
+        query = create_query(service, layer, where)
+        return func(query=query, **kwargs)
+
+    return wrapper
+
+@query_command
+def count(query: ArcGISQuery):
     """displays the query count"""
-    query = create_query(where)
     click.echo(query.count)
 
-@cli.command
-@click.argument('where', nargs=-1)
-def extent(where: str = None):
+
+@query_command
+def extent(query: ArcGISQuery):
     """displays the extent info"""
-    query = create_query(where)
     echo_json(query.extent)
 
 
@@ -74,12 +92,12 @@ def tileset_list():
     echo_json(tileset_source.list)
 
 
-@cli.command
-def download():
-    """download data into a file"""
-    query = create_query()
 
-    with open(Config.OUTPUT_FILE, "x", encoding="utf-8") as fp:
+@click.argument("filename", type=click.Path(exists=False))
+@query_command
+def download(query:ArcGISQuery, filename: str):
+    """download data into a file"""
+    with open(filename, "x", encoding="utf-8") as fp:
         fp.writelines(query.feature_strings)
 
 

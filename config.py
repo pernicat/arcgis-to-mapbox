@@ -7,7 +7,10 @@ import dotenv
 dotenv.load_dotenv()
 
 
-class Config:
+
+
+
+class Config:  # pylint: disable=too-few-public-methods
     """configuration"""
     ROOT_DIR = Path(__file__).parent
 
@@ -20,13 +23,14 @@ class Config:
     SERVICE_URL = f"https://{HOST}/{CONTEXT}/rest/services/{SERVICE_NAME}/{SERVICE_TYPE}"
     QUERY_URL = f"{SERVICE_URL}/{SERVICE_LAYER}/{OPERATION}"
 
-    MI_DNR_ROADS = "https://services3.arcgis.com/Jdnp1TjADvSDxMAX/ArcGIS/rest/services/DNR_ROADS/FeatureServer"
-    MI_DNR_OPEN_TRAILS_URL = "https://services3.arcgis.com/Jdnp1TjADvSDxMAX/ArcGIS/rest/services/open_Trails/FeatureServer"
-
-    ARCGIS_SERVICE_URLS ={
-        "MI_DNR_ROADS": MI_DNR_ROADS,
-        "MI_DNR_OPEN_TRAILS": MI_DNR_OPEN_TRAILS_URL
-    }
+    MI_DNR_ROADS_URL = (
+        "https://services3.arcgis.com/Jdnp1TjADvSDxMAX/ArcGIS"
+        "/rest/services/DNR_ROADS/FeatureServer"
+    )
+    MI_DNR_OPEN_TRAILS_URL = (
+        "https://services3.arcgis.com/Jdnp1TjADvSDxMAX/ArcGIS"
+        "/rest/services/open_Trails/FeatureServer"
+    )
 
     MAPBOX_USER = "pernicat"
     MAPBOX_ID = "MI_DNR_ROADS_2022"
@@ -38,7 +42,10 @@ class Config:
     ATTRIBUTION = [
         {
             "text": "Michigan DNR 2022",
-            "link": "https://services3.arcgis.com/Jdnp1TjADvSDxMAX/ArcGIS/rest/services/DNR_ROADS/FeatureServer"
+            "link": (
+                "https://services3.arcgis.com/Jdnp1TjADvSDxMAX/ArcGIS"
+                "/rest/services/DNR_ROADS/FeatureServer"
+            ),
         }
     ]
 

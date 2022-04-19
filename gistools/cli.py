@@ -4,6 +4,7 @@ import json
 import typing as t
 
 import click
+import yaml
 
 from config import Config
 from .arcgis import ArcGISService, ArcGISQuery
@@ -34,9 +35,9 @@ def create_tileset_source() -> MapboxTilesetSource:
 
 
 @functools.cache
-def create_tileset() -> MapboxTileset:
+def create_tileset(name: str) -> MapboxTileset:
     """creates a mapbox tileset"""
-    return MapboxTileset(name=Config.MAPBOX_TILESET_NAME, access_token=Config.MAPBOX_ACCESS_TOKEN)
+    return MapboxTileset(name=name, access_token=Config.MAPBOX_ACCESS_TOKEN)
 
 
 def echo_json(data: t.Mapping):
@@ -101,65 +102,85 @@ def download(query:ArcGISQuery, filename: str):
         fp.writelines(query.feature_strings)
 
 
-@cli.command
-def upload():
+def tileset_source_command(func: t.Callable[[MapboxTilesetSource, ...], t.Any]) -> callable:
+    """wraps commands to inject a tileset source"""
+    @cli.command(func.__name__)
+    def wrapper(**kwargs):
+        return func(tileset_source=create_tileset_source(), **kwargs)
+
+    return wrapper
+
+
+@click.argument("mapbox_id", type=str)
+@click.argument("filename", type=click.Path(exists=False))
+@tileset_source_command
+def upload(tileset_source: MapboxTilesetSource, mapbox_id: str, filename: str):
     """uploads the contetns of the downloaded data to a tileset source"""
     tileset_source = create_tileset_source()
 
-    with open(Config.OUTPUT_FILE, "r", encoding="utf-8") as fp:
-        result = tileset_source.upload(Config.MAPBOX_ID, fp)
+    with open(filename, "r", encoding="utf-8") as fp:
+        result = tileset_source.upload(mapbox_id, fp)
 
     echo_json(result)
 
 
-def get_recipe() -> t.Mapping:
-    """loads the recipe from the file"""
-    with Config.RECIPE_MI_DNR_ROADS.open("r", encoding="utf-8") as fp:
+def get_json(filename) -> t.Mapping:
+    """loads json from a file"""
+    with open(filename, "r", encoding="utf-8") as fp:
         return json.load(fp)
+    
+
+def get_yaml(filename) -> t.Mapping:
+    """loads yaml from a file"""
+    with open(filename, "r", encoding="utf-8") as fp:
+        return yaml.safe_load(fp)
 
 
-@cli.command
-def create():
+def tileset_command(func: t.Callable[[MapboxTileset, ...], t.Any]) -> callable:
+    """wraps commands to inject a tileset"""
+    @cli.command(func.__name__.replace("_", "-"))
+    @click.argument("tileset", type=str)
+    def wrapper(tileset: str, **kwargs):
+        return func(tileset=create_tileset(tileset), **kwargs)
+
+    return wrapper
+
+
+@click.argument("tileset_file", type=click.Path(exists=True))
+@tileset_command
+def create(tileset: MapboxTileset, tileset_file: str):
     """creates a tileset based on the tileset source"""
-    tileset = create_tileset()
-
-    result = tileset.create(
-        recipe=get_recipe(),
-        description=Config.DESCRIPTION,
-        attribution=Config.ATTRIBUTION,
-        private=False,
-    )
-
+    data = get_yaml(tileset_file)
+    result = tileset.create(**data)
     echo_json(result)
 
-@cli.command("update-recipe")
-def update_recipe():
+
+@click.argument("tileset_file", type=click.Path(exists=True))
+@tileset_command
+def update_recipe(tileset: MapboxTileset, tileset_file: str):
     """updates the recipe"""
-    tileset = create_tileset()
-    result = tileset.update_recipe(get_recipe())
+    data = get_yaml(tileset_file)
+    result = tileset.update_recipe(data['recipe'])
     echo_json(result)
 
 
-@cli.command
-def jobs():
-    """starts the job to publish the tileset"""
-    tileset = create_tileset()
+@tileset_command
+def jobs(tileset: MapboxTileset):
+    """displays the job to publish the tileset"""
     result = tileset.jobs()
     echo_json(result)
 
 
-@cli.command
-def publish():
+@tileset_command
+def publish(tileset: MapboxTileset):
     """starts the job to publish the tileset"""
-    tileset = create_tileset()
     result = tileset.publish()
     echo_json(result)
 
 
-@cli.command("job-status")
 @click.argument('job_id')
-def job_status(job_id: str):
+@tileset_command
+def job_status(tileset: MapboxTileset, job_id: str):
     """gets the status of a specific job"""
-    tileset = create_tileset()
     result = tileset.job_status(job_id)
     echo_json(result)

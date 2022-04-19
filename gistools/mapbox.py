@@ -4,6 +4,7 @@ import typing as t
 
 import requests
 
+from config import Config
 from .helpers import check_response
 
 logger = logging.getLogger(__name__)
@@ -73,7 +74,7 @@ class MapboxTileset:
     @property
     def url(self):
         """gets the tileset service url"""
-        return f"{self.API_URL}/tilesets/v1/{self.name}"
+        return f"{self.API_URL}/tilesets/v1/{Config.MAPBOX_USER}.{self.name}"
 
     def _check_parameters(self, **kvargs) -> t.Mapping:
         """checks the parameters to make sure they are valid"""

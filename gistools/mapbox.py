@@ -4,7 +4,7 @@ import typing as t
 
 import requests
 
-from arcgis_to_mapbox.helpers import check_response
+from .helpers import check_response
 
 logger = logging.getLogger(__name__)
 

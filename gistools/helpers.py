@@ -5,7 +5,7 @@ import typing as t
 
 import requests
 
-from arcgis_to_mapbox.exceptions import RequestError, NotJSONError
+from .exceptions import RequestError, NotJSONError
 
 logger = logging.getLogger(__name__)
 

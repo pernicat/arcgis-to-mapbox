@@ -5,9 +5,9 @@ import typing as t
 
 import click
 
-from arcgis_to_mapbox.arcgis import ArcGISService, ArcGISQuery
-from arcgis_to_mapbox.mapbox import MapboxTileset, MapboxTilesetSource
 from config import Config
+from .arcgis import ArcGISService, ArcGISQuery
+from .mapbox import MapboxTileset, MapboxTilesetSource
 
 
 @functools.cache

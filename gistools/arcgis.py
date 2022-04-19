@@ -7,8 +7,8 @@ import typing as t
 
 import requests
 
-from arcgis_to_mapbox.exceptions import RequestError
-from arcgis_to_mapbox.helpers import check_response
+from .exceptions import RequestError
+from .helpers import check_response
 
 logger = logging.getLogger(__name__)
 

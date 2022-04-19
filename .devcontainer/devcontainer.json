@@ -40,7 +40,8 @@
 		"ms-python.python",
 		"mtxr.sqltools",
 		"mtxr.sqltools-driver-pg",
-		"bungcip.better-toml"
+		"bungcip.better-toml",
+		"editorconfig.editorconfig"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

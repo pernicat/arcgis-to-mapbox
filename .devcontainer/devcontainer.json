@@ -42,7 +42,8 @@
 		"mtxr.sqltools-driver-pg",
 		"bungcip.better-toml",
 		"editorconfig.editorconfig",
-		"Alpha4.jsonl"
+		"Alpha4.jsonl",
+		"Tobermory.es6-string-html"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

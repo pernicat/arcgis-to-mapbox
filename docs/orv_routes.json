@@ -1,0 +1,19 @@
+{
+  "tilejson": "2.1.0",
+  "name": "MI ORV Route 2022 v1",
+  "description": "Michigan's ORV Routes (vehicles over 50 inches)",
+  "version": "1.0.0",
+  "attribution": "<a href=\"https://www.michigan.gov/dnr/things-to-do/orv-riding/where\">Michigan ORV Routes</a>",
+  "scheme": "xyz",
+  "tiles": [
+    "https://api.mapbox.com/styles/v1/pernicat/cl3kle3b4001614oeanx6crf5/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicGVybmljYXQiLCJhIjoiY2tvN2Q2YzdkMTc2NDJvcXcweG12ZWNuZiJ9.BLjCtYUZK1sTpKYfR3ig1w"
+  ],
+  "minzoom": 10,
+  "maxzoom": 14,
+  "bounds": [
+    -90.418136,
+    41.696118,
+    -82.413474,
+    48.2388
+  ]
+}

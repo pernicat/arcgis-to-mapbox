@@ -1,0 +1,19 @@
+{
+    "tilejson": "2.1.0",
+    "name": "MI DNR Roads 2022 v4",
+    "description": "Michigan's State Forest Roads and Seasonal Roads",
+    "version": "1.0.0",
+    "attribution": "<a href=\"https://www.michigan.gov/dnr/things-to-do/orv-riding/state-forest-roads\">Michigan State Forest Roads</a>",
+    "scheme": "xyz",
+    "tiles": [
+      "https://api.mapbox.com/styles/v1/pernicat/cl3klc7ev004a14o5ttvreed1/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicGVybmljYXQiLCJhIjoiY2wza3VsNDJsMDdhbTNncXNtejQ1cG9zdCJ9.GFHGAJZ0UyhYyagQ0SOlow"
+    ],
+    "minzoom": 10,
+    "maxzoom": 14,
+    "bounds": [
+      -90.418136,
+      41.696118,
+      -82.413474,
+      48.2388
+    ]
+}

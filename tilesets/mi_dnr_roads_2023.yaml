@@ -1,0 +1,14 @@
+recipe:
+  version: 1
+  layers:
+    MI_DNR_ROADS_2022:
+      source: "mapbox://tileset-source/pernicat/MI_DNR_ROADS_2023"
+      minzoom: 10
+      maxzoom: 16
+description: DNR Road and ORV Status
+attribution: 
+  - text: Michigan Department of Natural Resources
+    link: https://services3.arcgis.com/Jdnp1TjADvSDxMAX/ArcGIS/rest/services/DNR_ROADS/FeatureServer
+  - text: Tony Pernicano
+    link: https://github.com/pernicat
+private: false

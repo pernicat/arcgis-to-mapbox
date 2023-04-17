@@ -1,0 +1,97 @@
+[
+  "case",
+  [
+    "match",
+    ["get", "Owner"],
+    [4],
+    true,
+    false
+  ],
+  "hsl(60, 100%, 50%)",
+  [
+    "match",
+    ["get", "RoadORVUse"],
+    ["Non-DNR Roads"],
+    true,
+    false
+  ],
+  [
+    "match",
+    ["get", "SurfaceType"],
+    [2],
+    "hsl(240, 100%, 50%)",
+    [1],
+    "hsl(0, 0%, 75%)",
+    "#000000"
+  ],
+  [
+    "<",
+    [
+      "get",
+      "ClosureCriteria"
+    ],
+    20
+  ],
+  "hsl(0, 100%, 50%)",
+  [
+    "match",
+    ["get", "RoadORVUse"],
+    [
+      "DNR Roads Closed to ORV's"
+    ],
+    true,
+    false
+  ],
+  "hsl(300, 100%, 50%)",
+  [
+    "match",
+    ["get", "RoadORVUse"],
+    [
+      "DNR Roads Open to ORV's"
+    ],
+    true,
+    false
+  ],
+  "hsl(120, 100%, 50%)",
+  [
+    "match",
+    ["get", "RoadORVUse"],
+    [
+      "Military Roads Closed to ORV's"
+    ],
+    true,
+    false
+  ],
+  "hsl(300, 100%, 29%)",
+  [
+    "match",
+    ["get", "RoadORVUse"],
+    [
+      "Military Roads Open to ORV's"
+    ],
+    true,
+    false
+  ],
+  "hsl(120, 100%, 29%)",
+  [
+    "match",
+    ["get", "RoadORVUse"],
+    [
+      "Seasonal DNR Roads Seasonal Closures to ORV's"
+    ],
+    true,
+    false
+  ],
+  "hsl(16, 100%, 50%)",
+  [
+    "match",
+    ["get", "RoadORVUse"],
+    [
+      "Military Roads Seasonally Closed to ORVs"
+    ],
+    true,
+    false
+  ],
+  "hsl(29, 100%, 50%)",
+  "hsl(180, 100%, 50%)"
+]

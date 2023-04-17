@@ -2,6 +2,48 @@
 
 Tools for exporting data out of an ArcGIS Feature server and into a Mapbox data source
 
+
+
+## Usage
+
+```shell
+poetry install
+poetry shell
+```
+
+```shell
+python -m gistools var/mi_dnr_roads_2023.jsonl
+python -m gistools upload var/mi_dnr_roads_2023.jsonl MI_DNR_ROADS_2023
+python -m gistools create MI_DNR_ROADS_2023 tilesets/mi_dnr_roads_2023.yaml
+python -m gistools publish MI_DNR_ROADS_2023
+python -m gistools job-status MI_DNR_ROADS_2023 clglfh3r4002h08l4ceyz61gh
+```
+
+https://studio.mapbox.com/
+
+Click `New style` -> `blank` 
+
+`Layers` tab on the left colum
+
+By stules at the top click on `blank` and change the name of the style.
+
+
+Click `+` 
+Select the new tileset
+Click the `Styles` tab
+Click `</>` at the bottom
+Copy and paist the style from `/styles`
+
+publish
+share
+Developer
+Third Party
+carto
+
+Gaia GPS
+Layers
+Add Custom Source
+
 ## API Documentation
 
 - [ArcGIS REST APIs Feature Service](https://developers.arcgis.com/rest/services-reference/enterprise/feature-service.htm)

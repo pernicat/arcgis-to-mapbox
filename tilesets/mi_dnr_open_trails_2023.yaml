@@ -2,91 +2,91 @@ recipe:
   version: 1
   layers:
     water_trails:
-      source: mapbox://tileset-source/pernicat/water_trails
+      source: mapbox://tileset-source/pernicat/MI_DNR_WATER_TRAILS_2023
       minzoom: 10
       maxzoom: 16
     hiking_trails:
-      source: mapbox://tileset-source/pernicat/hiking_trails
+      source: mapbox://tileset-source/pernicat/MI_DNR_HIKING_TRAILS_2023
       minzoom: 10
       maxzoom: 16
     bycycle_trails:
-      source: mapbox://tileset-source/pernicat/bycycle_trails
+      source: mapbox://tileset-source/pernicat/MI_DNR_BICYCLE_TRAILS_2023
       minzoom: 10
       maxzoom: 16
     equestrian_trails:
-      source: mapbox://tileset-source/pernicat/equestrian_trails
+      source: mapbox://tileset-source/pernicat/MI_DNR_EQUESTRIAN_TRAILS_2023
       minzoom: 10
       maxzoom: 16
     ski_trails:
-      source: mapbox://tileset-source/pernicat/ski_trails
+      source: mapbox://tileset-source/pernicat/MI_DNR_SKI_TRAILS_2023
       minzoom: 10
       maxzoom: 16
     snowshoe_trails:
-      source: mapbox://tileset-source/pernicat/snowshoe_trails
+      source: mapbox://tileset-source/pernicat/MI_DNR_SHOWSHOE_TRAILS_2023
       minzoom: 10
       maxzoom: 16
     motorcycle_trails:
-      source: mapbox://tileset-source/pernicat/motorcycle_trails
+      source: mapbox://tileset-source/pernicat/MI_DNR_MOTORCYCLE_TRAILS_2023
       minzoom: 10
       maxzoom: 16
     atv_trails:
-      source: mapbox://tileset-source/pernicat/atv_trails
+      source: mapbox://tileset-source/pernicat/MI_DNR_ATV_TRAILS_2023
       minzoom: 10
       maxzoom: 16
     orv_routes:
-      source: mapbox://tileset-source/pernicat/orv_routes
+      source: mapbox://tileset-source/pernicat/MI_DNR_ORV_ROUTES_2023
       minzoom: 10
       maxzoom: 16
     snowmobile_trails:
-      source: mapbox://tileset-source/pernicat/snowmobile_trails
+      source: mapbox://tileset-source/pernicat/MI_DNR_SNOWMOBILE_TRAILS_2023
       minzoom: 10
       maxzoom: 16
     mccct:
-      source: mapbox://tileset-source/pernicat/mccct
+      source: mapbox://tileset-source/pernicat/MI_DNR_MCCCT_TRAILS_2023
       minzoom: 10
       maxzoom: 16
     railtrail:
-      source: mapbox://tileset-source/pernicat/railtrail
+      source: mapbox://tileset-source/pernicat/MI_DNR_RAILTRAILS_TRAILS_2023
       minzoom: 10
       maxzoom: 16
     hunter_walking_trails:
-      source: mapbox://tileset-source/pernicat/hunter_walking_trails
+      source: mapbox://tileset-source/pernicat/MI_DNR_HUNTER_TRAILS_2023
       minzoom: 10
       maxzoom: 16
     dnr_trails:
-      source: mapbox://tileset-source/pernicat/dnr_trails
+      source: mapbox://tileset-source/pernicat/MI_DNR_TRAILS_2023
       minzoom: 10
       maxzoom: 16
     iron_belle_trail:
-      source: mapbox://tileset-source/pernicat/iron_belle_trail
+      source: mapbox://tileset-source/pernicat/MI_DNR_IRON_BELLE_TRAILS_2023
       minzoom: 10
       maxzoom: 16
     trail_groom_sponsors:
-      source: mapbox://tileset-source/pernicat/trail_groom_sponsors
+      source: mapbox://tileset-source/pernicat/MI_DNR_GROOM_SPONSER_TRAILS_2023
       minzoom: 10
       maxzoom: 16
     dnr_grant_points:
-      source: mapbox://tileset-source/pernicat/dnr_grant_points
+      source: mapbox://tileset-source/pernicat/MI_DNR_REC_GRANT_POINTS_2023
       minzoom: 10
       maxzoom: 16
     dnr_grant_polys:
-      source: mapbox://tileset-source/pernicat/dnr_grant_polys
+      source: mapbox://tileset-source/pernicat/MI_DNR_REC_GRANT_POLYS_2023
       minzoom: 10
       maxzoom: 16
     # dnr_grant_coordinator_regions:
-    #   source: mapbox://tileset-source/pernicat/dnr_grant_coordinator_regions
+    #   source: mapbox://tileset-source/pernicat/MI_DNR_REC_GRANT_REGIONS_2023
     #   minzoom: 10
     #   maxzoom: 16
     # map_extents:
-    #   source: mapbox://tileset-source/pernicat/map_extents
+    #   source: mapbox://tileset-source/pernicat/MI_DNR_MAP_EXTENDS_TRAILS_2023
     #   minzoom: 10
     #   maxzoom: 16
     nonmotorized_trails:
-      source: mapbox://tileset-source/pernicat/nonmotorized_trails
+      source: mapbox://tileset-source/pernicat/MI_DNR_NONMORORIZED_TRAILS_2023
       minzoom: 10
       maxzoom: 16
     # trails_regions_boundaries:
-    #   source: mapbox://tileset-source/pernicat/trails_regions_boundaries
+    #   source: mapbox://tileset-source/pernicat/MI_DNR_TRAIL_REGIONS_2023
     #   minzoom: 10
     #   maxzoom: 16
 description: Michigan DNR Open Trails 2023

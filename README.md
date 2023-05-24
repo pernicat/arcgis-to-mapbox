@@ -11,12 +11,83 @@ poetry install
 poetry shell
 ```
 
+### DNR Roads
+
 ```shell
 python -m gistools var/mi_dnr_roads_2023.jsonl
 python -m gistools upload var/mi_dnr_roads_2023.jsonl MI_DNR_ROADS_2023
 python -m gistools create MI_DNR_ROADS_2023 tilesets/mi_dnr_roads_2023.yaml
 python -m gistools publish MI_DNR_ROADS_2023
 python -m gistools job-status MI_DNR_ROADS_2023 clglfh3r4002h08l4ceyz61gh
+```
+
+### Other DNR Trails
+
+download the shapefiles
+
+```shell
+python -m gistools download --service=MI_DNR_OPEN_TRAILS --layer=0 var/mi_dnr_water_trails_2023.jsonl
+python -m gistools download --service=MI_DNR_OPEN_TRAILS --layer=1 var/mi_dnr_hiking_trails_2023.jsonl
+python -m gistools download --service=MI_DNR_OPEN_TRAILS --layer=2 var/mi_dnr_bicycle_trails_2023.jsonl
+python -m gistools download --service=MI_DNR_OPEN_TRAILS --layer=3 var/mi_dnr_equestrian_trails_2023.jsonl
+python -m gistools download --service=MI_DNR_OPEN_TRAILS --layer=4 var/mi_dnr_ski_trails_2023.jsonl
+python -m gistools download --service=MI_DNR_OPEN_TRAILS --layer=5 var/mi_dnr_snowshoe_trails_2023.jsonl
+python -m gistools download --service=MI_DNR_OPEN_TRAILS --layer=6 var/mi_dnr_motorcycle_trails_2023.jsonl
+python -m gistools download --service=MI_DNR_OPEN_TRAILS --layer=7 var/mi_dnr_atv_trails_2023.jsonl
+python -m gistools download --service=MI_DNR_OPEN_TRAILS --layer=8 var/mi_dnr_orv_routes_2023.jsonl
+python -m gistools download --service=MI_DNR_OPEN_TRAILS --layer=9 var/mi_dnr_snowmobile_trails_2023.jsonl
+python -m gistools download --service=MI_DNR_OPEN_TRAILS --layer=10 var/mi_dnr_mccct_2023.jsonl
+python -m gistools download --service=MI_DNR_OPEN_TRAILS --layer=11 var/mi_dnr_railtrails_2023.jsonl
+python -m gistools download --service=MI_DNR_OPEN_TRAILS --layer=12 var/mi_dnr_hunter_walking_trails_2023.jsonl
+python -m gistools download --service=MI_DNR_OPEN_TRAILS --layer=13 var/mi_dnr_trails_2023.jsonl
+python -m gistools download --service=MI_DNR_OPEN_TRAILS --layer=14 var/mi_dnr_iron_belle_trail_2023.jsonl
+python -m gistools download --service=MI_DNR_OPEN_TRAILS --layer=15 var/mi_dnr_trail_groom_sponser_2023.jsonl
+python -m gistools download --service=MI_DNR_OPEN_TRAILS --layer=16 var/mi_dnr_recreation_grant_points_2023.jsonl
+python -m gistools download --service=MI_DNR_OPEN_TRAILS --layer=17 var/mi_dnr_recreation_grant_polys_2023.jsonl
+python -m gistools download --service=MI_DNR_OPEN_TRAILS --layer=18 var/mi_dnr_recreation_grant_coordinator_regions_2023.jsonl
+python -m gistools download --service=MI_DNR_OPEN_TRAILS --layer=19 var/mi_dnr_map_extends_2023.jsonl
+python -m gistools download --service=MI_DNR_OPEN_TRAILS --layer=20 var/mi_dnr_nonmotorized_trails_2023.jsonl
+python -m gistools download --service=MI_DNR_OPEN_TRAILS --layer=21 var/mi_dnr_trail_region_boundries_2023.jsonl
+
+```
+
+Upload the shapefiles
+
+```shell
+python -m gistools upload var/mi_dnr_water_trails_2023.jsonl MI_DNR_WATER_TRAILS_2023
+python -m gistools upload var/mi_dnr_hiking_trails_2023.jsonl MI_DNR_HIKING_TRAILS_2023
+python -m gistools upload var/mi_dnr_bicycle_trails_2023.jsonl MI_DNR_BICYCLE_TRAILS_2023
+python -m gistools upload var/mi_dnr_equestrian_trails_2023.jsonl MI_DNR_EQUESTRIAN_TRAILS_2023
+python -m gistools upload var/mi_dnr_ski_trails_2023.jsonl MI_DNR_SKI_TRAILS_2023
+python -m gistools upload var/mi_dnr_snowshow_trails_2023.jsonl MI_DNR_SHOWSHOE_TRAILS_2023
+python -m gistools upload var/mi_dnr_motorcycle_trails_2023.jsonl MI_DNR_MOTORCYCLE_TRAILS_2023
+python -m gistools upload var/mi_dnr_atv_trails_2023.jsonl MI_DNR_ATV_TRAILS_2023
+python -m gistools upload var/mi_dnr_orv_routes_2023.jsonl MI_DNR_ORV_ROUTES_2023
+python -m gistools upload var/mi_dnr_snowmobile_trails_2023.jsonl MI_DNR_SNOWMOBILE_TRAILS_2023
+python -m gistools upload var/mi_dnr_mccct_2023.jsonl MI_DNR_MCCCT_TRAILS_2023
+python -m gistools upload var/mi_dnr_railtrails_2023.jsonl MI_DNR_RAILTRAILS_TRAILS_2023
+python -m gistools upload var/mi_dnr_hunter_walking_trails_2023.jsonl MI_DNR_HUNTER_TRAILS_2023
+python -m gistools upload var/mi_dnr_trails_2023.jsonl MI_DNR_TRAILS_2023
+python -m gistools upload var/mi_dnr_iron_belle_trail_2023.jsonl MI_DNR_IRON_BELLE_TRAILS_2023
+python -m gistools upload var/mi_dnr_trail_groom_sponser_2023.jsonl MI_DNR_GROOM_SPONSER_TRAILS_2023
+python -m gistools upload var/mi_dnr_recreation_grant_points_2023.jsonl MI_DNR_REC_GRANT_POINTS_2023
+python -m gistools upload var/mi_dnr_recreation_grant_polys_2023.jsonl MI_DNR_REC_GRANT_POLYS_2023
+python -m gistools upload var/mi_dnr_recreation_grant_coordinator_regions_2023.jsonl MI_DNR_REC_GRANT_REGIONS_2023
+python -m gistools upload var/mi_dnr_map_extends_2023.jsonl MI_DNR_MAP_EXTENDS_TRAILS_2023
+python -m gistools upload var/mi_dnr_nonmotorized_trails_2023.jsonl MI_DNR_NONMORORIZED_TRAILS_2023
+python -m gistools upload var/mi_dnr_trail_region_boundries_2023.jsonl MI_DNR_TRAIL_REGIONS_2023
+```
+
+Create the the tileset
+
+```shell
+python -m gistools create MI_DNR_OPEN_TRIALS_2023 tilesets/mi_dnr_open_trails_2023.yaml
+```
+
+Publish the tileset
+
+```shell
+python -m gistools publish MI_DNR_OPEN_TRIALS_2023
 ```
 
 https://studio.mapbox.com/

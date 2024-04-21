@@ -103,14 +103,19 @@ Click `New style` -> `blank`
 
 `Layers` tab on the left colum
 
-By stules at the top click on `blank` and change the name of the style.
+By styles at the top click on `blank` and change the name of the style.
 
 
 Click `+` 
+Select `Custom Layer`
+Under Source select the new tileset
 Select the new tileset
 Click the `Styles` tab
 Click `</>` at the bottom
 Copy and paste the style from `/styles`
+
+To View: 11.77
+44.708,-85.437
 
 publish
 share

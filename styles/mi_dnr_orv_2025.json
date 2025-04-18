@@ -1,0 +1,40 @@
+[
+  "case",
+  [
+    "match",
+    ["get", "Trail_Network"],
+    [
+      "Michigan Cross Country Cycle Trail (MCCCT)"
+    ],
+    true,
+    false
+  ],
+  "hsl(360, 100%, 60%)",
+  [
+    "match",
+    ["get", "Use_Category"],
+    ["Both"],
+    true,
+    false
+  ],
+  "hsl(65, 100%, 35%)",
+  [
+    "match",
+    ["get", "Width"],
+    ["72\" Maximum"],
+    true,
+    false
+  ],
+  "hsl(22, 99%, 46%)",
+  [
+    "match",
+    ["get", "License_Type"],
+    [
+      "ORV License & Trail Permit"
+    ],
+    true,
+    false
+  ],
+  "hsl(37, 100%, 35%)",
+  "hsl(186, 100%, 35%)"
+]

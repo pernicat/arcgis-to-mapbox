@@ -1,0 +1,57 @@
+[
+  "case",
+  [
+    "match",
+    ["get", "Owner"],
+    [4],
+    true,
+    false
+  ],
+  "hsl(60, 100%, 50%)",
+  [
+    "match",
+    ["get", "RoadORVUse"],
+    ["Non-DNR Roads"],
+    true,
+    false
+  ],
+  [
+    "match",
+    ["get", "SurfaceType"],
+    [2],
+    "hsl(240, 100%, 50%)",
+    [1],
+    "hsl(0, 0%, 75%)",
+    "#000000"
+  ],
+  [
+    "<",
+    [
+      "get",
+      "ClosureCriteria"
+    ],
+    20
+  ],
+  "hsl(0, 100%, 50%)",
+  [
+    "match",
+    ["get", "RoadORVUse"],
+    [
+      "DNR Roads Closed to ORVs"
+    ],
+    true,
+    false
+  ],
+  "hsl(300, 100%, 50%)",
+  [
+    "match",
+    ["get", "RoadORVUse"],
+    [
+      "DNR Roads Open to ORVs"
+    ],
+    true,
+    false
+  ],
+  "hsl(120, 100%, 50%)",
+  "hsl(180, 100%, 50%)"
+]

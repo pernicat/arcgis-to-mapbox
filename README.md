@@ -54,7 +54,7 @@ python -m gistools download --service=MI_DNR_OPEN_TRAILS --layer=17 var/mi_dnr_r
 python -m gistools download --service=MI_DNR_OPEN_TRAILS --layer=18 var/mi_dnr_recreation_grant_coordinator_regions_${YEAR}.jsonl
 python -m gistools download --service=MI_DNR_OPEN_TRAILS --layer=19 var/mi_dnr_map_extends_${YEAR}.jsonl
 python -m gistools download --service=MI_DNR_OPEN_TRAILS --layer=20 var/mi_dnr_nonmotorized_trails_${YEAR}.jsonl
-python -m gistools download --service=MI_DNR_OPEN_TRAILS --layer=21 var/mi_dnr_trail_region_boundries_${YEAR}.jsonl
+python -m gistools download --service=MI_DNR_OPEN_TRAILS --layer=21 var/mi_dnr_trail_region_boundaries_${YEAR}.jsonl
 
 ```
 
@@ -66,7 +66,7 @@ python -m gistools upload var/mi_dnr_hiking_trails_${YEAR}.jsonl MI_DNR_HIKING_T
 python -m gistools upload var/mi_dnr_bicycle_trails_${YEAR}.jsonl MI_DNR_BICYCLE_TRAILS_${YEAR}
 python -m gistools upload var/mi_dnr_equestrian_trails_${YEAR}.jsonl MI_DNR_EQUESTRIAN_TRAILS_${YEAR}
 python -m gistools upload var/mi_dnr_ski_trails_${YEAR}.jsonl MI_DNR_SKI_TRAILS_${YEAR}
-python -m gistools upload var/mi_dnr_snowshow_trails_${YEAR}.jsonl MI_DNR_SHOWSHOE_TRAILS_${YEAR}
+python -m gistools upload var/mi_dnr_snowshoe_trails_${YEAR}.jsonl MI_DNR_SHOWSHOE_TRAILS_${YEAR}
 python -m gistools upload var/mi_dnr_motorcycle_trails_${YEAR}.jsonl MI_DNR_MOTORCYCLE_TRAILS_${YEAR}
 python -m gistools upload var/mi_dnr_atv_trails_${YEAR}.jsonl MI_DNR_ATV_TRAILS_${YEAR}
 python -m gistools upload var/mi_dnr_orv_routes_${YEAR}.jsonl MI_DNR_ORV_ROUTES_${YEAR}
@@ -82,7 +82,7 @@ python -m gistools upload var/mi_dnr_recreation_grant_polys_${YEAR}.jsonl MI_DNR
 python -m gistools upload var/mi_dnr_recreation_grant_coordinator_regions_${YEAR}.jsonl MI_DNR_REC_GRANT_REGIONS_${YEAR}
 python -m gistools upload var/mi_dnr_map_extends_${YEAR}.jsonl MI_DNR_MAP_EXTENDS_TRAILS_${YEAR}
 python -m gistools upload var/mi_dnr_nonmotorized_trails_${YEAR}.jsonl MI_DNR_NONMORORIZED_TRAILS_${YEAR}
-python -m gistools upload var/mi_dnr_trail_region_boundries_${YEAR}.jsonl MI_DNR_TRAIL_REGIONS_${YEAR}
+python -m gistools upload var/mi_dnr_trail_region_boundaries_${YEAR}.jsonl MI_DNR_TRAIL_REGIONS_${YEAR}
 ```
 
 Create the the tileset
@@ -101,7 +101,7 @@ https://studio.mapbox.com/
 
 Click `New style` -> `blank` 
 
-`Layers` tab on the left colum
+`Layers` tab on the left column
 
 By styles at the top click on `blank` and change the name of the style.
 

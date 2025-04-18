@@ -31,7 +31,7 @@ downloads: \
 	var/mi_dnr_recreation_grant_coordinator_regions_$(YEAR).jsonl \
 	var/mi_dnr_map_extends_$(YEAR).jsonl \
 	var/mi_dnr_nonmotorized_trails_$(YEAR).jsonl \
-	var/mi_dnr_trail_region_boundries_$(YEAR).jsonl \
+	var/mi_dnr_trail_region_boundaries_$(YEAR).jsonl \
 
 var/mi_dnr_roads_$(YEAR).jsonl:
 	python -m gistools download ${@}
@@ -77,7 +77,7 @@ var/mi_dnr_map_extends_$(YEAR).jsonl:
 	$(call gis_download,19,${@})
 var/mi_dnr_nonmotorized_trails_$(YEAR).jsonl:
 	$(call gis_download,20,${@})
-var/mi_dnr_trail_region_boundries_$(YEAR).jsonl:
+var/mi_dnr_trail_region_boundaries_$(YEAR).jsonl:
 	$(call gis_download,21,${@})
 
 uploads: \
@@ -103,7 +103,7 @@ uploads: \
 	var/mi_dnr_recreation_grant_coordinator_regions_$(YEAR)-upload.json \
 	var/mi_dnr_map_extends_$(YEAR)-upload.json \
 	var/mi_dnr_nonmotorized_trails_$(YEAR)-upload.json \
-	var/mi_dnr_trail_region_boundries_$(YEAR)-upload.json
+	var/mi_dnr_trail_region_boundaries_$(YEAR)-upload.json
 
 var/mi_dnr_roads_$(YEAR)-upload.json: var/mi_dnr_roads_$(YEAR).jsonl
 	$(call gis_upload,$<,MI_DNR_ROADS_$(YEAR),$@)
@@ -149,7 +149,7 @@ var/mi_dnr_map_extends_$(YEAR)-upload.json: var/mi_dnr_map_extends_$(YEAR).jsonl
 	$(call gis_upload,$<,MI_DNR_MAP_EXTENDS_TRAILS_$(YEAR),$@)
 var/mi_dnr_nonmotorized_trails_$(YEAR)-upload.json: var/mi_dnr_nonmotorized_trails_$(YEAR).jsonl
 	$(call gis_upload,$<,MI_DNR_NONMORORIZED_TRAILS_$(YEAR),$@)
-var/mi_dnr_trail_region_boundries_$(YEAR)-upload.json: var/mi_dnr_trail_region_boundries_$(YEAR).jsonl
+var/mi_dnr_trail_region_boundaries_$(YEAR)-upload.json: var/mi_dnr_trail_region_boundaries_$(YEAR).jsonl
 	$(call gis_upload,$<,MI_DNR_TRAIL_REGIONS_$(YEAR),$@)
 
 

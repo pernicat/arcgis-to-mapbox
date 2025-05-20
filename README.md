@@ -628,3 +628,10 @@ Shape__Length:
     }
 ]
 ```
+
+## License
+This project is free for personal and educational use only.
+
+Commercial use (including use by for-profit companies or as part of paid services or products) requires written permission from the author.
+
+If you're interested in using this commercially, please contact me.
